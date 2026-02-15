@@ -1,14 +1,12 @@
 #[derive(Default)]
-struct Movement {
-    author: String,
-    explanation: String,
-    guid: String,
-    index: i32,
-    isAuthor: bool,
-    name: String,
-    standardTimer: i32,
+pub struct Movement {
+    pub author: String,
+    pub explanation: String,
+    pub guid: String,
+    pub index: i32,
+    pub isAuthor: bool,
+    pub name: String,
+    pub standardTimer: i32,
 }
 
-impl Movement {
-    
-}
+impl Movement {}

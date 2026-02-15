@@ -1,11 +1,16 @@
+use super::plan::Plan;
+use super::plan_cell_domain::PlanCellDomain;
+use std::boxed::Box;
+
 #[derive(Default)]
-struct Plan {
+struct PlanState {
+    plan: Vec<Plan>,
     // trainingCycleStruct
     // folders
     // dbReference
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone)]
 enum PlanAction {
     Initialize,
     Subscriptions(PlanSubscription),
@@ -19,12 +24,18 @@ enum PlanAction {
     UserInteraction(UserInteraction),
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone)]
 enum PlanSubscription {
-    Start,
+    StartSubsciptions,
+    SubscribeToInsertedPlans,
+    SubscribeToDeletedPlans,
+    SubscribeToTrainingCycleAdded,
+
+    HandleInsertedPlan(Box<Plan>),
+    HandleDeletedPlan,
 }
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone)]
 enum UserInteraction {
     TappedPresentPlan,
     TappedPlan,

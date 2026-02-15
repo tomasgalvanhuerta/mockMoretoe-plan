@@ -1,12 +1,12 @@
 use chrono::NaiveDate;
 
-#[derive(Default)]
-struct Plan {
-    author: String,
-    guid: String,
-    index: i32,
-    inProgress: bool,
-    name: String,
-    started: NaiveDate,
-    subtitle: String,
+#[derive(Debug, Clone, Default)]
+pub struct Plan {
+    pub author: String,
+    pub guid: String,
+    pub index: i32,
+    pub in_progress: bool,
+    pub name: String,
+    pub started: NaiveDate,
+    pub subtitle: String,
 }
