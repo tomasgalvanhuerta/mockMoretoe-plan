@@ -9,4 +9,6 @@ pub struct Movement {
     pub isAuthor: bool,
     pub name: String,
     pub standardTimer: i32,
+
+    pub image_ids: Vec<Uuid>,
 }

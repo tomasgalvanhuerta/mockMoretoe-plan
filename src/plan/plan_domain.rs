@@ -5,6 +5,7 @@ use std::boxed::Box;
 #[derive(Default)]
 struct PlanState {
     plan: Vec<Plan>,
+    cells: Vec<PlanCellDomain>,
     // trainingCycleStruct
     // folders
     // dbReference
