@@ -17,6 +17,7 @@ pub struct LiftingDecode {
     lifting_type: String,
     author: String,
     name: String,
-    standardTimer: i32,
+    #[serde(rename = "standardTimer")]
+    standard_timer: i32,
     guid: Uuid,
 }
