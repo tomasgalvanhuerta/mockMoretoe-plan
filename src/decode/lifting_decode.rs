@@ -5,6 +5,7 @@ use uuid::Uuid;
 #[derive(Debug, Deserialize)]
 pub struct LiftingDecode {
     reps: Vec<RepsDecode>,
+    #[serde(default)]
     medium: String, // Can be a fixed string
 
     #[serde(rename = "bodyPart")]
@@ -14,10 +15,19 @@ pub struct LiftingDecode {
     workout_type: String,
 
     #[serde(rename = "liftingType")]
+    #[serde(default)]
     lifting_type: String,
+
+    #[serde(default)]
     author: String,
+
+    #[serde(default)]
     name: String,
+
     #[serde(rename = "standardTimer")]
+    #[serde(default)]
     standard_timer: i32,
+
+    #[serde(default)]
     guid: Uuid,
 }
