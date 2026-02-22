@@ -1,3 +1,4 @@
+use super::gif_image::GifImageDecode;
 use super::lifting_decode::LiftingDecode;
 use super::movement_type_decode::MovementTypeDecode;
 use serde::Deserialize;
@@ -18,10 +19,5 @@ pub struct MovementDecode {
     #[serde(rename = "superSet")]
     pub super_set: Vec<Self>,
 
-    pub image_ids: Vec<Uuid>, // ID's to fetch images
-}
-
-struct GifImageDecode {
-    pub id: Uuid,
-    pub image_ids: Vec<i8>,
+    pub image_ids: Vec<GifImageDecode>, // ID's to fetch images
 }

@@ -1954,6 +1954,7 @@ dependencies = [
  "chrono",
  "iced",
  "serde",
+ "serde_json",
  "uuid",
 ]
 

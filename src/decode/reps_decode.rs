@@ -1,4 +1,6 @@
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
-pub struct RepsDecode {}
+pub struct RepsDecode {
+    // Get this from the
+}
