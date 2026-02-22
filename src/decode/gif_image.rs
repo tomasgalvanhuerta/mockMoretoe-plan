@@ -3,6 +3,9 @@ use uuid::Uuid;
 
 #[derive(Debug, Deserialize)]
 pub struct GifImageDecode {
-    pub id: Uuid,
-    pub image_ids: Vec<i8>,
+    #[serde(rename = "refMovementGUID")]
+    pub guid: Uuid,
+
+    #[serde(rename = "data")]
+    pub image_ids: Vec<u8>,
 }
