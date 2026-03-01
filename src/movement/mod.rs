@@ -1,2 +1,5 @@
 pub mod gif_image;
-pub mod movement; // Persistance Data
+pub mod lifting_decode;
+pub mod movement;
+pub mod movement_type_decode;
+pub mod reps_decode;

@@ -1,5 +1,5 @@
-use super::plan::Plan;
 use super::plan_cell_domain::PlanCellDomain;
+use crate::plan::plan::Plan;
 use std::boxed::Box;
 
 #[derive(Default)]

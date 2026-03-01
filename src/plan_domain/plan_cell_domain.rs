@@ -1,4 +1,4 @@
-use super::plan::Plan;
+use crate::plan::plan::Plan;
 use iced::widget::{Column, Image, Text, column, image, text};
 use std::boxed::Box;
 

@@ -1,13 +1,19 @@
-use iced::widget::image;
+use serde::Deserialize;
 use uuid::Uuid;
 
-struct GifImage {
-    pub id: Uuid,
-    pub image_ids: Vec<Uuid>,
+#[derive(Debug, Deserialize)]
+pub struct GifImageDecode {
+    #[serde(rename = "refMovementGUID")]
+    pub guid: String,
+
+    #[serde(rename = "gif")]
+    pub image_ids: Vec<ImageToe>,
 }
 
-// impl GifImage {
-//     fn view(&self) {} -> Element<'_, Message> {
+#[derive(Debug, Deserialize)]
+pub struct ImageToe {
+    #[serde(rename = "data")]
+    pub data: String,
 
-//     }
-// }
+    pub index: i64,
+}

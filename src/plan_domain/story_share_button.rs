@@ -1,4 +1,4 @@
-use super::plan::Plan;
+use crate::plan::plan::Plan;
 use chrono::NaiveDate;
 
 #[derive(Debug, Clone, Default)]

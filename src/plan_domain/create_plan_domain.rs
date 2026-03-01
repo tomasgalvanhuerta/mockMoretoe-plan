@@ -1,4 +1,4 @@
-use super::plan::Plan;
+use crate::plan::plan::Plan;
 
 #[derive(Debug, Clone)]
 pub struct CreatePlanDomain {
