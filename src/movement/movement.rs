@@ -1,10 +1,9 @@
 use super::gif_image::GifImageDecode;
-use super::lifting_decode::LiftingDecode;
 use super::movement_type_decode::MovementTypeDecode;
 use serde::Deserialize;
 use uuid::Uuid;
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Clone, Debug)]
 pub struct Movement {
     #[serde(default)]
     pub author: String,

@@ -2,7 +2,7 @@ use super::lifting_decode::LiftingDecode;
 use serde::Deserialize;
 use uuid::Uuid;
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Clone, Debug)]
 pub struct MovementTypeDecode {
     pub name: String,
 

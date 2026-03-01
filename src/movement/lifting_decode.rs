@@ -2,7 +2,7 @@ use super::reps_decode::RepsDecode;
 use serde::Deserialize;
 use uuid::Uuid;
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Clone, Deserialize)]
 pub struct LiftingDecode {
     reps: Vec<RepsDecode>,
     #[serde(default)]
