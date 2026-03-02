@@ -14,7 +14,9 @@ pub struct Plan {
     pub name: String,
     // pub started: NaiveDate,
     pub subtitle: String,
-    pub movement_ids: Vec<Movement>,
 
-    pub images: GifImageDecode,
+    #[serde(rename = "movement")]
+    pub movements: Vec<Movement>,
+
+    pub images: Vec<GifImageDecode>,
 }
