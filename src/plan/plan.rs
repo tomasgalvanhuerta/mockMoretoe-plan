@@ -1,8 +1,7 @@
 use crate::movement::gif_image::GifImageDecode;
 use crate::movement::movement::Movement;
-use serde::Deserialize;
-// use crate::plan::plan::Plan;
 use chrono::NaiveDate;
+use serde::Deserialize;
 use uuid::Uuid;
 
 #[derive(Debug, Clone, Deserialize, Default)]
